@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Speech-voice-Identification</title>
+<!--
+
+Template 2101 Insertion
+
+http://www.tooplate.com/view/2101-insertion
+
+-->
+  <!-- load CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">        <!-- Google web font "Open Sans" -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="static/bootstrap.min.css">
+  <link rel='stylesheet' href="{{ url_for('static', filename='static/font-awesome.min.css')}}">                                     <!-- Font awesome -->
+  <link rel="stylesheet" href="static/style.css">                                           <!-- Templatemo style -->
+
+</head>
+
+<body>
+    <div class="tm-main">
+        <div class="row">
+
+            <div class="column">
+                <div class="borderI">
+                    <div class="out">
+                        <form action="/audioStreaming" method="post">
+                            <button type="submit" value="" class="mic-button"><i class="fa fa-microphone microphone-ico"></i></button>
+                        </form>
+                        <p class="msg">{{msg}}</p>
+
+                    </div>
+                    <div class="feature">
+                        <div class="col">
+                            <div class="cont-col">
+                                <img src="static\img\mfcc_dist.png" class="img1">
+                    
+                            </div>
+                         </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="column2">
+                <!-- <div class="headerb">
+                    <p class="header">ML Model</p>
+                </div> -->
+                <div class="borderI">
+                    <div class="cont-col">
+                            <img src="static\img\mfcc_plot.png" class="img">
+                            <img src="static\img\mfcc_scatter.png" class="img">
+                            <!-- <img src="static\img\sohaila_dist.png" class="img"> -->
+                    </div>
+                    </div>
+            </div>
+        </div>
+    
+    </div>
+
+
+  <!-- load JS -->
+  <script src="static/jquery-3.2.1.slim.min.js"></script> <!-- https://jquery.com/ -->
+  <script>
+
+    /* DOM is ready
+    ------------------------------------------------*/
+    $(function () {
+
+      if (renderPage) {
+        $('body').addClass('loaded');
+      }
+
+      $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright
+    });
+
+  </script>
+</body>
+</html>
